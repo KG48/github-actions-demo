@@ -1,0 +1,14 @@
+name: Karan CI workflow
+
+on:
+    push:
+
+jobs: 
+    build:    # name of job 
+        runs-on: ubuntu-latest   # Github Runner (free)
+        steps:
+            - name: Checkout Code
+            uses: actions/checkout@v4 #clone the code into a ubuntu
+            
+            - name: Setup Docker
+            uses: docker/setup-buildx-action@v4
